@@ -8,6 +8,7 @@ var audio = document.getElementById("player");
 var playBtn = document.getElementById("play");
 var stopBtn = document.getElementById("stop");
 var nextBtn = document.getElementById("next");
+var randBtn = document.getElementById("shuffle");
 
 var songList = [];
 
@@ -138,4 +139,16 @@ for (i=0; i<queueList.length;i++) {
 }
 
 
+// i can't believe i forgot to add a random button.....
+
+randBtn.addEventListener("click", function() {randomSong()})
+
+var randomSong = function() {
+	var rando = (Math.random() * (songList.length - 1)).toFixed(0);
+	audio.setAttribute("src", songList[rando].path);
+	art.setAttribute("src", songList[rando].coverart);
+	infoBox.innerHTML = "<h1>" + songList[rando].name + "</h1> <h2>" + songList[rando].artist + "</h2>";
+	genreBox.innerHTML = "<h3><ul><li>" + findGenres(songList[rando].genre) + "</li></ul></h3>";
+	audio.play();
+}
 
