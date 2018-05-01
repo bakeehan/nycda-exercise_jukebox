@@ -1,0 +1,180 @@
+body {
+	width: 90%;
+	margin:30px auto 40px;
+	font-family: 'Quicksand', sans-serif;
+}
+
+.controls {
+	/*text-align:center;*/
+	grid-area: buttons;
+}
+
+.container button {
+	border:none;
+	width:100px;
+	font-size: 3em;
+	color:white;
+	background-color: transparent;
+	text-align: left;
+}
+
+.container {
+	display: grid;
+	grid-template-areas: 
+		'img titles'
+		'img buttons'
+		'genre genre'
+	;
+	grid-template-columns: 200px auto;
+	grid-template-rows: 90px 110px auto;
+	grid-column-gap: 15px;
+	padding: 20px 20px 15px;
+	background-color: #000;
+}
+
+.container img {
+	grid-area: img;
+	width:160px;
+	height: 160px;
+	margin-bottom:20px;
+    /*-webkit-filter: grayscale(100%);*/
+    /*filter: grayscale(100%);*/
+    border:20px solid white;
+}
+
+#info {grid-area: titles;}
+
+#info h1 {
+	margin:0;
+	font-family: 'Montserrat', sans-serif;
+	font-style: italic;
+	/*text-transform: uppercase;*/
+	font-size: 2.25em;
+	color: white;
+}
+
+#info h2, .qhead h2 {
+	margin:0;
+	/*font-style: italic;*/
+	font-size:1.5em;
+	color: #833d68;
+}
+
+#info h2{
+	text-transform: uppercase;
+}
+
+#genres {
+	grid-area: genre;
+	/*background-color: white;*/
+	/*overflow: auto;*/
+	/*overflow-x: hidden;*/
+	color:#5e1b45;
+	/*color:#833d68;*/
+	width:100%;
+}
+
+#genres h3 {
+	margin:0;
+	width:100%;
+}
+
+#genres ul {
+    list-style-type: none;
+    font-size: .9em;
+    margin:10px 0 0;
+    /*padding: 5px 5px 10px;*/
+    padding:0;
+    width:100%;
+}
+
+#genres ul li {
+	display:inline-block;
+	/*margin-bottom: 5px;*/
+	margin-right: 20px;
+}
+
+#genres ul li:before {
+	content: "\f001";
+	font-family: "Font Awesome 5 Free";
+	font-size: .75em;
+	margin-right:5px;
+}
+
+/*#genres::-webkit-scrollbar {width: 5px;}*/
+/*#genres::-webkit-scrollbar-thumb {background: #943d73;}*/
+
+
+
+form, .goholder {
+	margin-top:10px;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-column-gap: 20px;
+	grid-template-columns: 1fr 1fr;
+}
+
+form {
+	grid-template-areas:
+		'labone labtwo'
+		'butone buttwo'
+		'labthree labfour'
+		'butthree butfour'
+		'labfive labfive'
+		'butfive butfive'
+	;
+	grid-row-gap: 1px;
+}
+
+.goholder {
+	grid-template-areas:
+		'. down'
+	;
+	margin-top: 10px;
+}
+
+.goholder button {
+	border: none;
+	background-color: #833d68;
+	padding:5px 0;
+	font-style: oblique;
+	color:white;
+}
+
+.buttonlabel {
+	/*margin-top:5px;*/
+	padding-left:5px;
+}
+
+.label1 {grid-area:labone;}
+.label2 {grid-area:labtwo;}
+.label3 {grid-area:labthree;}
+.label4 {grid-area:labfour;}
+.label5 {grid-area:labfive;}
+
+#title {grid-area:butone;}
+#artist {grid-area:buttwo;}
+#url {grid-area:butthree;}
+#art {grid-area:butfour;}
+#genreNew {grid-area:butfive;}
+
+#addNew {grid-area:down;}
+
+#queueHolder {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.qhead h2 {
+	font-style: italic;
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 10px;
+}
+
+.songqueue {
+	width:45%;
+	border:3px double #833d68;
+	margin-bottom:10px;
+	padding:5px;
+}

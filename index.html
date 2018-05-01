@@ -2,11 +2,49 @@
 <html>
 <head>
 	<title>jukebox project</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Quicksand" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
 <body>
 
+<div class="container">
+	<img id="coverart">
+	<div id="info"></div>
+	<div id="genres"></div>
+	<audio id="player"></audio>
+	<div class="controls">
+		<button id="play"><i class="fas fa-play"></i></button>
+		<button id="stop"><i class="fas fa-pause"></i></button>
+		<button id="next"><i class="fas fa-fast-forward"></i></button>
+	</div>
+</div>
+<!-- <div id="genres"></div> -->
+
+<!-- TO DO create inputs to add song w url -->
+
+<form>
+	<div class="buttonlabel label1">enter song title</div>
+	<input type="text" id="title">
+	<div class="buttonlabel label2">enter artist</div>
+	<input type="text" id="artist">
+	<div class="buttonlabel label3">enter song URL</div>
+	<input type="text" id="url">
+	<div class="buttonlabel label4">enter URL for coverart</div>
+	<input type="text" id="art">
+	<div class="buttonlabel label5">enter genres (separated by commas)</div>
+	<input type="text" id="genreNew">
+</form>
+<div class="goholder">
+	<button id="addNew">add a new song!</button>
+</div>
+
+<div class="qhead"><h2>Available songs</h2></div>
+<div id="queueHolder">
+</div>
+
 <script src="scripts/scripts.js"></script>
+<script>FontAwesomeConfig = { searchPseudoElements: true };</script>
 </body>
 </html>
